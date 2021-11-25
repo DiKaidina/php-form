@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Agency</title>
+   
+    <style>
+        body {
+          background-image:url(img/snow.gif);
+         
+         background-attachment: fixed; 
+         background-size: 100%;
+         color: #fff; /* Цвет текста */
+         font-family: Georgia, 'Times New Roman', Times, serif;
+         text-align: justify;
+         font-size: 18px;
+        }
+        
+       img {
+             /* Выравнивание по правому краю  */ 
+           float: left;
+           margin: 70px 0 7px 7px; 
+       }
+            .guruweba_example_form {
+            width: 500px;
+            margin:auto;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-style:italic;
+            color: bisque;
+        }
+        .guruweba_example_caption {
+            font-size: 20px;
+            text-align: center;
+            font-style: oblique;
+            color: aquamarine;
+        }
+        .guruweba_example_form .guruweba_example_infofield {
+            margin-top: 10px;
+           
+        }
+        .guruweba_example_form select, .guruweba_example_form input, .guruweba_example_form textarea {
+            width: 100%;
+            margin: 5px 0;
+            padding: 5px 15px;
+        }
+       
+        
+        </style>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1...."></script>
+</head>
+<body>
+<form action="input.php" class="guruweba_example_form" name="Tour" method="POST" >
+    <div class="guruweba_example_caption">Тур агенство "Престиж"</div>
+    <div class="guruweba_example_infofield">Интересующий регион </div>
+    <select name="theme" required="required">
+      <option value="">Выберите вариант</option>
+      <option>Европа</option>
+      <option>Южная Америка</option>
+      <option>Северная Америка</option>
+      <option>Азиатский регион</option>
+      <option>Африка</option>
+      <option>Другое</option>
+    </select>
+        <div>Ваше Ф.И.О.</div> 
+        <input type="text" name="name" required= "required" >
+        <div>Ваш email</div>
+        <input type="email" name="email" required="required">
+        <div>Личные пожелания </div>
+        <textarea name="message"></textarea>
+        <div> Предпочтительная дата поездки</div>
+        <input name="tour_date" type="date" >
+        
+        <div class = "check">Выберите интересующие вас опции
+            
+            <div for="alone"><input id="alone" type="checkbox">Тур на одного </div>
+            <div for="lovers"><input id="lovers" type="checkbox">Тур на двоих</div>
+            <div for="family"><input id="family" type="checkbox"> Тур для отдыха с детьми</div>
+            <div for="friends"><input id="friends" type="checkbox"> Тур для отдыха с друзьями</div>
+        </div> <br>
+        <div>Картинки понравившегося места(если есть)</div>  
+            <div for="alone"><input id="alone" type="file"> </div>
+            <div for="lovers"><input id="lovers" type="file"></div>
+            <div for="family"><input id="family" type="file"> </div>
+        <br>
+        
+        <br>
+        <div>Создайте учетную запись</div> <br>
+        <div>Логин:</div>
+        <input name = "login" type = "text" maxlength="25" >
+        <div>Пароль:</div>
+        <input name = "password" type = "password" maxlength="10"> <br>
+        <div>Запомнить пароль</div>
+        <input name="remember" type="checkbox" value="yes" />  <br />
+        <p>Планируете ли вы воспользоваться нашими тарифами?</p>
+            <p><input name="adams" type="radio" value="bright"> Тариф яркий</p>
+            <p><input name="adams" type="radio" value="adams"> Семейка Адамс</p>
+            <p><input name="adams" type="radio" value="romance" checked> Романтическая история</p>
+            <p><input type="submit" value="Выбрать"></p>
+        
+        <input type="submit"  value="Отправить">
+        
+<!--            <input type="reset" value="Очистить"> -->
+    </form>
+    
+        <script src='snowfall.js'></script>
+            <script type="text/javascript">
+        $(document).ready(function(){
+            $(document).snowfall({image :"img/snow4.png", minSize: 10, maxSize:20});
+        });
+    </script>
+
+<script type="text/javascript">
+    //Выводим сообщение
+    alert('Заполните форму, и наши турагенты свяжутся с вами в ближайшее время !');
+   </script>
+</body>
+</html>
